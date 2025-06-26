@@ -13,7 +13,7 @@ export default function Login() {
     setLoading(true);
     setError('');
     try {
-      await axios.post('http://localhost:5000/api/auth/login', data, { withCredentials: true });
+      await axios.post('https://authentication-z09t.onrender.com', data, { withCredentials: true });
       navigate('/');
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed');
